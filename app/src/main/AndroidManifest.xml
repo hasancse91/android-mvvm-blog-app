@@ -15,10 +15,10 @@
         android:theme="@style/Theme.AndroidMVVMBlogApp"
         tools:targetApi="31">
         <activity
-            android:name=".BlogDetailsActivity"
+            android:name=".blog_details.BlogDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".BlogListActivity"
+            android:name=".blog_list.view.BlogListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
