@@ -2,6 +2,7 @@ package com.hellohasan.mvvmblog.blog_list.view_model
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.hellohasan.mvvmblog.blog_list.model.BlogItemUiModel
 import com.hellohasan.mvvmblog.blog_list.model.BlogListModel
 import com.hellohasan.mvvmblog.blog_list.model.BlogListModelImpl
@@ -10,7 +11,7 @@ import com.hellohasan.mvvmblog.blog_list.model.data.BlogResponse
 import java.text.SimpleDateFormat
 import java.util.Locale
 
-class BlogListViewModel : ViewModel() {
+class BlogListViewModel(private val model : BlogListModel) : ViewModel() {
 
     val showLoaderLiveData = MutableLiveData<Boolean>()
     val showErrorLiveData = MutableLiveData<String>()
@@ -18,7 +19,14 @@ class BlogListViewModel : ViewModel() {
         MutableLiveData<List<BlogItemUiModel>>()
     }
 
-    private val model : BlogListModel = BlogListModelImpl()
+    companion object {
+        val Factory: ViewModelProvider.Factory = object : ViewModelProvider.Factory {
+            override fun <T : ViewModel> create(modelClass: Class<T>): T {
+                val model: BlogListModel = BlogListModelImpl()
+                return BlogListViewModel(model) as T
+            }
+        }
+    }
 
     fun getBlogList() {
         showLoaderLiveData.postValue(true)
