@@ -3,6 +3,8 @@
 Welcome to the Android MVVM Blog Reading App repository! This project is a hands-on example of building a Blog Reading App using the Model-View-ViewModel (MVVM) architectural pattern. Dive into this practical project to enhance your Android development skills and get a taste of what you'll learn in the [Android MVVM Architecture Course (Bengali)](http://learning.megaminds.technology/courses/android-mvvm-architecture/details). You can watch the course [introduction and outline from here](https://youtu.be/2oSJi-pwY2s?si=wVsXq2RkMqykL-Vd).
 
 
+https://github.com/hasancse91/android-mvvm-blog-app/assets/3769029/e5817744-cf8d-4310-8efc-8bf01df55c27
+
 
 ## Table of Contents
 
