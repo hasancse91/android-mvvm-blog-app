@@ -56,7 +56,7 @@ The project was then refactored using the Model-View-Presenter (MVP) architectur
 
 The MVP architecture brings several benefits, including improved code maintainability, separation of concerns, and testability.
 
-## MVP Architecture (The final goal!)
+## MVVM Architecture (The final goal!)
 
 From naive approach we have refactored and adopted it to MVVM architecture. The key components of the MVVM architecture include:
 
