@@ -13,7 +13,7 @@ https://github.com/hasancse91/android-mvvm-blog-app/assets/3769029/e5817744-cf8d
 - [Getting Started](#getting-started)
 - [Naive Approach](#naive-approach)
 - [MVP Architecture](#mvp-architecture)
-- [MVVM Architecture](#mvvm-architecture)
+- [MVVM Architecture](#mvvm-architecture-the-final-goal)
 
 ## Project Overview
 
