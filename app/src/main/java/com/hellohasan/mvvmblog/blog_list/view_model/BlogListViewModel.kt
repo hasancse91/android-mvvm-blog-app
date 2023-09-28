@@ -11,15 +11,16 @@ import com.hellohasan.mvvmblog.blog_list.model.data.BlogResponse
 import java.text.SimpleDateFormat
 import java.util.Locale
 
-class BlogListViewModel(private val model : BlogListModel) : ViewModel() {
+class BlogListViewModel(private val model: BlogListModel) : ViewModel() {
 
     val showLoaderLiveData = MutableLiveData<Boolean>()
     val showErrorLiveData = MutableLiveData<String>()
-    val blogListUiModelLiveData : MutableLiveData<List<BlogItemUiModel>> by lazy {
+    val blogListUiModelLiveData: MutableLiveData<List<BlogItemUiModel>> by lazy {
         MutableLiveData<List<BlogItemUiModel>>()
     }
 
     companion object {
+        @Suppress("UNCHECKED_CAST")
         val Factory: ViewModelProvider.Factory = object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
                 val model: BlogListModel = BlogListModelImpl()
@@ -46,7 +47,7 @@ class BlogListViewModel(private val model : BlogListModel) : ViewModel() {
 
     }
 
-    private fun getBlogUiModelList(blogResponseList: List<BlogResponse>) : List<BlogItemUiModel> {
+    private fun getBlogUiModelList(blogResponseList: List<BlogResponse>): List<BlogItemUiModel> {
         val blogUiModelList = mutableListOf<BlogItemUiModel>()
 
         blogResponseList.forEach {
@@ -65,7 +66,7 @@ class BlogListViewModel(private val model : BlogListModel) : ViewModel() {
         return blogUiModelList
     }
 
-    private fun getFormatterDate(dateInput: String) : String {
+    private fun getFormatterDate(dateInput: String): String {
         val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
         val outputFormat = SimpleDateFormat("dd MMM yyyy, hh:mm a", Locale.getDefault())
 
